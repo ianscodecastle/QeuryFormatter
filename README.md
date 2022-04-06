@@ -1,1 +1,2 @@
 # QeuryFormatter
+Simple script to help detect keywords in SQL queries and correct the formatting. Specifically, it focuses on capitalizing keywords and starting new lines with the newly capitalized keywords. This is done to help standardize formatting in very long and unwieldy SQL queries. 
