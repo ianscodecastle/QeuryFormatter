@@ -27,6 +27,14 @@ replace_exact_newline2 = re.sub(r'\bfrom\b', '\nFROM', replace_exact_newline)
 print('REPLACE EXACT STRING + NEW LINE:')
 print(replace_exact_newline2, '\n')
 
+keywords = [r'\bselect distinct\b', r'\bselect\b', r'\bwhere\b']
+keywords_new = ['\nSELECT DISTINCT', '\nSELECT', '\nWHERE']
+i = 0
+for i in range(0,len(keywords)):
+    old_string = re.sub(keywords[i], keywords_new[i], old_string)
+print('Keywords upper loop:', old_string)
+
+
 # Find number of full words in the string
 num_words = len(re.findall(r'\w+', old_string))
 print('There are', num_words, 'words in the original string.')
